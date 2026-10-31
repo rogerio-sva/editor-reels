@@ -10,7 +10,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { conferir } from './conferir.mjs';
-import { ff, folha, gravarJson, lerJson, marca, opcoes, posicionais, remotion } from './lib/comum.mjs';
+import { ff, folha, garantirNavegador, gravarJson, lerJson, marca, opcoes, posicionais, remotion } from './lib/comum.mjs';
 import { validarCapitulos, validarCenas } from './lib/validar.mjs';
 
 const args = process.argv.slice(2);
@@ -34,6 +34,7 @@ const chamada = () => {
   return lista[parseInt(crypto.createHash('md5').update(nome).digest('hex').slice(0, 8), 16) % lista.length];
 };
 
+garantirNavegador();
 fs.mkdirSync('out', { recursive: true });
 const saida = path.join('out', `${nome}${op.previa ? '-previa' : ''}.mp4`);
 const props = path.join(dir, 'props.json');
