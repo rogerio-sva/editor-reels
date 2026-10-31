@@ -1,0 +1,97 @@
+{
+ "estilo": "editorial",
+ "video": "editorial-exemplo/base.mp4",
+ "recorte": "editorial-exemplo/recorte.webm",
+ "audio": "editorial-exemplo/narracao.mp3",
+ "trilha": "editorial-exemplo/trilha.wav",
+ "volumeVideo": 0.12,
+ "ajusteVideo": "brightness(1.3) contrast(1.04)",
+ "miniaturas": [
+  "editorial-exemplo/mini/01.jpg",
+  "editorial-exemplo/mini/02.jpg",
+  "editorial-exemplo/mini/03.jpg",
+  "editorial-exemplo/mini/04.jpg",
+  "editorial-exemplo/mini/05.jpg",
+  "editorial-exemplo/mini/06.jpg",
+  "editorial-exemplo/mini/07.jpg",
+  "editorial-exemplo/mini/08.jpg"
+ ],
+ "legenda": {
+  "max": 3,
+  "destaques": [
+   "Claude.",
+   "cinematográfico.",
+   "sozinha.",
+   "EDITAR"
+  ]
+ },
+ "blocos": [
+  {
+   "tipo": "titulo-atras",
+   "em": "Eu",
+   "ate": "vídeo.",
+   "linhas": [
+    "EU NÃO",
+    "EDITEI"
+   ]
+  },
+  {
+   "tipo": "manchete",
+   "em": "Quem",
+   "ate": "Claude.",
+   "texto": "Quem editou foi o *Claude.*",
+   "tam": 132
+  },
+  {
+   "tipo": "apps",
+   "em": "Sem",
+   "ate": "nada.",
+   "riscar": [
+    {
+     "app": "CapCut",
+     "em": "CapCut,"
+    },
+    {
+     "app": "Edits",
+     "em": "aplicativo,"
+    }
+   ],
+   "fim": {
+    "texto": "nada.",
+    "em": "nada."
+   }
+  },
+  {
+   "tipo": "whip",
+   "em": "Eu#2"
+  },
+  {
+   "tipo": "cupom",
+   "em": "falo:",
+   "ate": "E",
+   "texto": "Deixa mais cinematográfico.",
+   "digitar_ate": "cinematográfico.",
+   "numero": 1
+  },
+  {
+   "tipo": "grade",
+   "em": "cinematográfico.",
+   "modo": "cinema",
+   "pelicula": true
+  },
+  {
+   "tipo": "paleta",
+   "em": "cena",
+   "ate": "sozinha.",
+   "modo": "cinema",
+   "titulo": "PALETA · CINEMA"
+  },
+  {
+   "tipo": "comentario",
+   "em": "Comenta",
+   "texto": "EDITAR",
+   "resposta": "Te mandei no direct.",
+   "perfil": "@andreoliveira.ai"
+  }
+ ]
+}

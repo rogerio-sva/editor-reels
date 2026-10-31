@@ -1,0 +1,24 @@
+{
+ "estilo": "quadro",
+ "audio": "quadro-exemplo/narracao.mp3",
+ "trilha": "quadro-exemplo/trilha.wav",
+ "rosto": { "video": "quadro-exemplo/rosto.mp4", "ate": "Antes," },
+ "cenas": [
+  { "em": "Antes,", "titulo": "ANTES", "subtitulo": "UM VÍDEO ASSIM PRECISAVA DE", "subtituloEm": "vídeo",
+    "itens": [
+     { "icone": "pessoa", "em": "editor,", "rotulo": "EDITOR" },
+     { "icone": "janela", "em": "programa", "rotulo": "PROGRAMA CARO" },
+     { "icone": "calendario", "em": "semana", "rotulo": "1 SEMANA" },
+     { "marca": "x", "em": "Esquece", "sobre": 0 },
+     { "marca": "x", "em": "Esquece", "sobre": 1 },
+     { "marca": "x", "em": "isso.", "sobre": 2 }
+    ] },
+  { "em": "Agora", "titulo": "AGORA", "corTitulo": "verde", "ligar": true,
+    "itens": [
+     { "icone": "microfone", "em": "áudio,", "rotulo": "SEU ÁUDIO" },
+     { "icone": "robo", "em": "Claude,", "rotulo": "CLAUDE" },
+     { "icone": "lapis", "em": "desenha", "rotulo": "DESENHA", "cor": "verde" },
+     { "marca": "check", "em": "hora", "sobre": 2 }
+    ] }
+ ]
+}

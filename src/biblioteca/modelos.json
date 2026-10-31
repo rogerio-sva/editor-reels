@@ -1,0 +1,201 @@
+{
+  "_leia": "Modelos de edição. Modelo = tema (cores) + receita (cenas preferidas, transições, intensidade). Modelo novo = entrada nova aqui.",
+  "podcast": {
+    "nome": "Podcast",
+    "tema": "marca",
+    "programa": "PODCAST",
+    "hud": true,
+    "fx": 1,
+    "serifa": false,
+    "transicoes": [
+      "glitchRGB",
+      "pontoAbre",
+      "flash",
+      "corteBatida",
+      "chicoteLuz",
+      "foco"
+    ],
+    "preferidas": [
+      "fala",
+      "heroi",
+      "slam",
+      "contraste",
+      "dividido",
+      "numero"
+    ],
+    "ritmo": "uma cena nova a cada 2 a 4 s; volte para a gravação (fala, heroi, dividido) pelo menos a cada 2 cenas, o rosto de quem fala é o que segura",
+    "quando": "podcast e conversa com convidado"
+  },
+  "aula": {
+    "nome": "Aula",
+    "tema": "aula",
+    "programa": "AULA",
+    "hud": true,
+    "fx": 0.8,
+    "serifa": false,
+    "transicoes": [
+      "pontoAbre",
+      "flash",
+      "foco",
+      "chicoteLuz",
+      "fusao"
+    ],
+    "preferidas": [
+      "fala",
+      "lista",
+      "dividido",
+      "numero",
+      "slam"
+    ],
+    "ritmo": "uma cena a cada 3 a 5 s; passo a passo vira lista; conceito novo vira slam",
+    "quando": "aulas, professores, passo a passo e explicação técnica"
+  },
+  "urgente": {
+    "nome": "Urgente",
+    "tema": "urgente",
+    "programa": "ATENÇÃO",
+    "hud": true,
+    "fx": 1.3,
+    "serifa": false,
+    "transicoes": [
+      "corteBatida",
+      "glitchRGB",
+      "flash",
+      "chicoteLuz"
+    ],
+    "preferidas": [
+      "slam",
+      "heroi",
+      "contraste",
+      "fala",
+      "numero"
+    ],
+    "ritmo": "cortes rápidos, uma cena a cada 1,5 a 3 s; muito slam",
+    "quando": "gancho forte, polêmica, erro comum, prazo acabando"
+  },
+  "autoridade": {
+    "nome": "Autoridade",
+    "tema": "marca",
+    "programa": "",
+    "hud": false,
+    "fx": 0.4,
+    "serifa": true,
+    "transicoes": [
+      "fusao",
+      "foco",
+      "pontoAbre"
+    ],
+    "preferidas": [
+      "fala",
+      "citacao",
+      "dividido",
+      "heroi"
+    ],
+    "ritmo": "calmo, uma cena a cada 4 a 6 s; frase de impacto vira citacao",
+    "quando": "especialista, tema sério ou institucional"
+  },
+  "editorial": {
+    "nome": "Editorial",
+    "estilo": "editorial",
+    "tema": "marca",
+    "programa": "",
+    "hud": false,
+    "fx": 0.5,
+    "serifa": true,
+    "transicoes": [
+      "fusao"
+    ],
+    "preferidas": [
+      "titulo-atras",
+      "manchete",
+      "pilula",
+      "grade",
+      "layout",
+      "whip"
+    ],
+    "ritmo": "um bloco novo a cada 1 a 2 s; nada parado mais de 2 s",
+    "quando": "uma pessoa falando para a câmera (aula, depoimento, dica); NÃO serve para duas pessoas no quadro"
+  },
+  "capitulos": {
+    "nome": "Aula em capítulos",
+    "estilo": "folha",
+    "fundo": "papel",
+    "capitulos": true,
+    "tema": "marca",
+    "programa": "",
+    "hud": false,
+    "fx": 0.7,
+    "serifa": false,
+    "transicoes": [
+      "fita",
+      "fusao",
+      "pontoAbre"
+    ],
+    "preferidas": [
+      "fala",
+      "chips",
+      "documento",
+      "passos",
+      "slam",
+      "numero",
+      "duelo",
+      "heroi"
+    ],
+    "ritmo": "uma cena a cada 3 a 5 s; divida a fala em 3 a 5 capítulos; enumeração vira chips ou passos; lei, NR ou trecho técnico vira documento; volte para a gravação (fala, heroi) pelo menos a cada 2 cenas",
+    "quando": "aula, explicação técnica, passo a passo, dica de professor (uma ou duas pessoas)",
+    "pessoaSempre": true
+  },
+  "documentos": {
+    "nome": "Documentos",
+    "estilo": "folha",
+    "fundo": "mesa",
+    "capitulos": false,
+    "tema": "marca",
+    "programa": "",
+    "hud": false,
+    "fx": 0.8,
+    "serifa": false,
+    "transicoes": [
+      "fita",
+      "corteBatida",
+      "flash",
+      "fusao"
+    ],
+    "preferidas": [
+      "documento",
+      "fala",
+      "heroi",
+      "duelo",
+      "numero",
+      "contraste",
+      "chips"
+    ],
+    "ritmo": "uma cena a cada 2 a 4 s; o que é prova (contrato, norma, valor, prazo, relatório) vira documento ou número; decisão ganha carimbo",
+    "quando": "caso real, história com prova, notícia, valores citados na fala"
+  },
+  "moldura": {
+    "nome": "Moldura Pop",
+    "estilo": "moldura",
+    "recorte": true,
+    "tema": "marca",
+    "programa": "",
+    "hud": false,
+    "fx": 0.9,
+    "serifa": false,
+    "transicoes": [
+      "pontoAbre",
+      "flash",
+      "fita",
+      "glitchRGB"
+    ],
+    "preferidas": [
+      "fala",
+      "heroi",
+      "chips",
+      "numero",
+      "documento"
+    ],
+    "ritmo": "uma cena a cada 2 a 4 s; palavra forte vira heroi (letreiro atrás da cabeça); enumeração vira chips; número dito vira numero",
+    "quando": "uma pessoa falando para a câmera (dica, opinião, aula curta); NÃO serve para duas pessoas no quadro"
+  }
+}

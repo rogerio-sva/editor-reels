@@ -1,0 +1,37 @@
+{
+  "nome": "Sua Marca",
+  "cores": {
+    "fundo": "#0B0D0C",
+    "texto": "#F2EAD8",
+    "destaque": "#D9B862",
+    "suave": "#8A8478"
+  },
+  "fontes": {
+    "titulo": "Archivo",
+    "corpo": "Inter"
+  },
+  "logo": "",
+  "handle": "@seuperfil",
+  "chamadas": [
+    {
+      "tipo": "comentario",
+      "titulo": "Você concorda?",
+      "sub": "Deixe seu comentário"
+    },
+    {
+      "tipo": "seguir",
+      "titulo": "Siga para mais dicas",
+      "sub": "Toda semana tem conteúdo novo"
+    },
+    {
+      "tipo": "direct",
+      "titulo": "Quer saber mais?",
+      "sub": "Fale com a gente"
+    },
+    {
+      "tipo": "comentario",
+      "titulo": "E você, o que acha?",
+      "sub": "Conta aqui nos comentários"
+    }
+  ]
+}
