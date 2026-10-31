@@ -58,6 +58,9 @@ Título atrás da pessoa fica ilegível em anúncio: não use em criativo.
    8 a 15 linhas que você vai seguir ao escrever a partitura nesse estilo.
 4. Liste para a pessoa o que o vídeo tem e o sistema ainda não faz. Copie estrutura e ritmo, nunca o conteúdo nem a marca de outra pessoa.
 
+O clone adapta com as cenas que existem: copia ritmo, cores, estrutura e gancho. Maquete 3D, personagem e outros efeitos que o sistema
+não tem não são reproduzidos: use a cena mais próxima e avise. Vídeo sem pessoa pede o modelo mais próximo ou motion puro.
+
 ## Ajustes por conversa
 
 Troque só o que foi pedido em `saida/<nome>/partitura.json` e rode o render de novo: não precisa cortar nem preparar outra vez.

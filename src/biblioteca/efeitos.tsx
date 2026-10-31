@@ -121,7 +121,7 @@ export const LegendaKaraoke: React.FC<{
 };
 
 /* ---------------- moldura de seleção (estilo Figma) ---------------- */
-export const MolduraSelecao: React.FC<{ x: number; y: number; w: number; h: number; q0: number; cor?: string; folga?: number }> = ({ x, y, w, h, q0, cor = FOLHA.azulSelecao, folga = 10 }) => {
+export const MolduraSelecao: React.FC<{ x: number; y: number; w: number; h: number; q0: number; cor?: string; folga?: number }> = ({ x, y, w, h, q0, cor = FOLHA.azulSelecao, folga = 5 }) => {
   const c = useCenaM();
   const p = mola(c.frame, 'estalo', q0);
   if (c.frame < q0) return null;

@@ -1,11 +1,11 @@
 /* Fita diagonal . T 14, k 7.
-   Duas faixas largas inclinadas (amarelo marca-texto e azul-marinho) atravessam a tela de baixo-esquerda para
+   Duas faixas largas inclinadas (nas cores do tema) atravessam a tela de baixo-esquerda para
    cima-direita; no quadro k elas cobrem tudo e a cena troca por baixo; depois saem pelo outro lado. */
 import React from 'react';
 import { AbsoluteFill, useVideoConfig } from 'remotion';
 import type { TransitionPresentation, TransitionPresentationComponentProps } from '@remotion/transitions';
 import { quadroDaJanela, type ComJanela } from '../base/transicao';
-import { clamp01, ease } from '../tema';
+import { clamp01, ease, PALETA } from '../tema';
 
 export type PropsFita = ComJanela<{ cores?: [string, string]; angulo?: number }>;
 
@@ -14,7 +14,7 @@ export const FitaApresentacao: React.FC<TransitionPresentationComponentProps<Pro
   const q = quadroDaJanela(presentationProgress, p.T);
   const saindo = presentationDirection === 'exiting';
   if (saindo) return <AbsoluteFill style={{ visibility: q >= p.k ? 'hidden' : 'visible' }}>{children}</AbsoluteFill>;
-  const [c1, c2] = p.cores ?? ['#FFE066', '#13213A'];
+  const [c1, c2] = p.cores ?? [PALETA.acento, PALETA.floresta];
   const ang = p.angulo ?? -24;
   const diag = Math.hypot(W, H);
   // posição da fita ao longo do caminho: entra (0 → 0,5 no quadro k) e sai (0,5 → 1)

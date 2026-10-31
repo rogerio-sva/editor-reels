@@ -7,7 +7,7 @@ Você manda um vídeo falando e pede: "edita esse vídeo no modelo documentos". 
 - Legenda que acende palavra por palavra
 - 8 modelos que mudam a edição, não só a cor: podcast, documentos, aula em capítulos, moldura (a cabeça sai da moldura), urgente, autoridade, aula e editorial
 - Cenas animadas: número contando, itens que acendem, documento com marca-texto, carimbos, duelo de barras, passos, capítulos
-- Clona o estilo de um vídeo de referência e cria um modelo novo
+- Clona o estilo de um vídeo de referência e cria um modelo novo: copia ritmo, cores, estrutura e gancho (efeitos que o sistema não tem, como maquete 3D, ficam de fora)
 - Confere o vídeo pronto: quadro preto, imagem parada, silêncio, volume no padrão de -14 LUFS
 - Motion puro, narração, tela dividida e carrossel em vídeo (Skill Motion)
 
