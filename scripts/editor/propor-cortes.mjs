@@ -15,6 +15,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {sh, duracao} from './lib/sh.mjs';
 import {lerEnv} from './lib/env.mjs';
@@ -59,6 +60,32 @@ export const tratarAudio = async (video, pasta, {isolar = true, log = console.lo
   return {voz, isolado};
 };
 
+/** Trechos sem voz medidos no áudio (grátis, pelo ffmpeg). */
+export const medirSilencios = (voz, {min = 0.2} = {}) => {
+  // limite relativo ao volume médio do próprio áudio (a voz tratada tem ruído de sala acima de -35 dB)
+  const vol = String(spawnSync('ffmpeg', ['-hide_banner', '-i', voz, '-af', 'volumedetect', '-f', 'null', '-'], {encoding: 'utf8', maxBuffer: 1 << 28}).stderr);
+  const media = Number((vol.match(/mean_volume:\s*(-?[\d.]+)/) || [])[1] ?? -19);
+  const db = Math.max(-40, Math.min(-20, Math.round(media - 7)));
+  const r = spawnSync('ffmpeg', ['-hide_banner', '-i', voz, '-af', `silencedetect=n=${db}dB:d=${min}`, '-f', 'null', '-'], {encoding: 'utf8', maxBuffer: 1 << 28});
+  const txt = String(r.stderr);
+  const ini = [...txt.matchAll(/silence_start: (-?[\d.]+)/g)].map((m) => Number(m[1]));
+  const fim = [...txt.matchAll(/silence_end: ([\d.]+)/g)].map((m) => Number(m[1]));
+  return ini.map((a, k) => ({a: Math.max(0, a), b: fim[k] ?? Infinity})).filter((x) => Number.isFinite(x.b));
+};
+
+/** A transcrição local emenda as palavras sem intervalo: os silêncios medidos no áudio abrem esses intervalos,
+    e o corte de silêncios passa a funcionar sem a ElevenLabs. Palavra que começa dentro do silêncio vai para o fim
+    dele; palavra que termina dentro volta para o começo. */
+export const ajustarPorSilencio = (palavras, silencios) => palavras.map((p) => {
+  let {start, end} = p;
+  for (const {a, b} of silencios) {
+    if (start >= a && start < b) start = b;
+    if (end > a && end <= b) end = a;
+    if (start < a && end > b && a - start > 0.15 && b - a > 0.3) end = a;
+  }
+  return end - start >= 0.04 ? {...p, start, end} : p;
+});
+
 const fmt = (s) => s.toFixed(2).replace('.', ',');
 
 export const tabelaDeFrases = (palavras, frases) => frases.map((f) => {
@@ -85,6 +112,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   } else {
     console.log('2/3 transcrevendo palavra a palavra…');
     ({fonte, palavras} = await transcrever(voz));
+    if (fonte === 'whisper') palavras = ajustarPorSilencio(palavras, medirSilencios(voz));
   }
   fs.writeFileSync(path.join(pasta, 'palavras.json'), JSON.stringify({fonte, palavras}, null, 1));
   console.log('3/3 propondo os cortes…');

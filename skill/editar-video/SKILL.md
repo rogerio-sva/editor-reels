@@ -29,7 +29,7 @@ node scripts/reel/render.mjs <nome> --previa
 node scripts/reel/render.mjs <nome>
 ```
 
-Vídeo já limpo? No passo 1 confira a lista, deixe tudo como "fica" e siga. Sem chave da ElevenLabs a transcrição é local: silêncios curtos quase não saem e frases interrompidas não são marcadas, então confira com mais cuidado. O render final sai em `out/<nome>.mp4`.
+Vídeo já limpo? No passo 1 confira a lista, deixe tudo como "fica" e siga. Sem chave da ElevenLabs tudo funciona de graça: a transcrição é local e os silêncios saem pelo ffmpeg, mas frases interrompidas não são marcadas e termos técnicos podem sair errados, então confira com mais cuidado. O render final sai em `out/<nome>.mp4`.
 
 **Antes de entregar:** abra `out/<nome>-conferencia.jpg` com Read: texto cortado, sobreposto, fora da tela ou em cima do rosto?
 A conferência automática lista quadro preto, imagem parada, silêncio e volume; no Mac, também texto fora da área segura.

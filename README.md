@@ -13,6 +13,12 @@ Você manda um vídeo falando e pede: "edita esse vídeo no modelo documentos". 
 
 Roda no seu computador. Não precisa de After Effects, Premiere ou CapCut.
 
+## Quanto custa
+
+O editor é gratuito e o vídeo é renderizado no seu computador, sem crédito por vídeo e sem marca d'água.
+Você só precisa do Claude Code, que depende de um plano pago do Claude ou de uma chave de API.
+A ElevenLabs é opcional. Empresas com mais de 3 funcionários precisam da licença do Remotion (veja Licenças).
+
 ## Instalação
 
 Você precisa do [Claude Code](https://claude.com/claude-code), do [Node.js](https://nodejs.org) 22.18 ou mais novo e do ffmpeg.
@@ -50,7 +56,7 @@ O Claude corta, escreve as cenas, mostra uma prévia e renderiza. O vídeo sai e
 ## Opcional
 
 - **Chave da ElevenLabs** em `.env` (copie `.env.exemplo`): transcrição melhor, corte de silêncios mais preciso, voz sem eco e narração.
-  Sem ela, tudo funciona com a transcrição local, mas os silêncios curtos quase não saem.
+  Sem ela, tudo funciona de graça com a transcrição local e o corte de silêncios pelo ffmpeg. Revise a grafia dos nomes e termos técnicos.
 - **Modelo moldura fora do Mac:** `pip install "rembg[cpu]"` para recortar a pessoa. Sem placa de vídeo é lento:
   alguns segundos por quadro, mais de 1 hora num vídeo de 1 minuto. No Mac o recorte é nativo e leva poucos minutos.
 
